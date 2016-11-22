@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <style>
+        header{
+            width:16rem;
+            height:2.5rem;
+            background:-webkit-linear-gradient(#fff,#ebebeb);
+            position:relative;
+        }
+        header .a1{
+            display:block;
+            width:3.25rem;
+            height:1.6rem;
+            background:url("img/return.png") no-repeat;
+            background-size:100%;
+            text-indent:-999em;
+            position:absolute;
+            left:0.5rem;
+            top:0.5rem;
+        }
+        header span{
+            display:block;
+            width:9rem;
+            height:2.2rem;
+            font-size:0.775rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:2.2rem;
+            margin-left:4rem;
+            padding-top:0.3rem;
+        }
+
+        .title{
+            width:16rem;
+            height:2rem;
+            border-bottom:1px solid #dcdcdc;
+        }
+        .title ul li{
+            float:left;
+            border-right:1px solid #dcdcdc;
+            width:3.95rem;
+            height:100%;
+        }
+        .title ul .last{
+            border-right:none;
+        }
+        .title ul .last a{
+            color:#d51942;
+        }
+        .title li a{
+            display:block;
+            width:100%;
+            height:100%;
+            font-size:0.575rem;
+            color:#999;
+            text-align:center;
+            line-height:2rem;
+            font-weight:bold;
+        }
+
+        .ad{
+            width:16rem;
+            height:6.3rem;
+            position:relative;
+        }
+        .ad ul{
+            width:100%;
+            height:5.7rem;
+            overflow:hidden;
+        }
+        .ad ul li{
+            width:100%;
+            height:5.7rem;
+            float:left;
+        }
+        .ad ul li img{
+            width:100%;
+            height:100%;
+        }
+        .ad ol{
+            width:2.5rem;
+            height:0.25rem;
+            position:absolute;
+            left:6.125rem;
+            top:5.7rem;
+        }
+        .ad ol li{
+            float:left;
+            margin:0 0.125rem;
+            width:0.25rem;
+            height:0.25rem;
+            border-radius:50%;
+            background:#a9a9a9;
+        }
+        .ad ol .on{
+            background:#333;
+        }
+
+        .list{
+            width:16rem;
+        }
+        .list ul li{
+            width:100%;
+            height:3.975rem;
+            border-top:1px solid #dcdcdc;
+        }
+        .list ul li a{
+            display:block;
+            width:100%;
+            height:100%;
+            padding: 1.0025rem 0.875rem;
+        }
+        .list ul li a img{
+            width:1.95rem;
+            height:1.95rem;
+        }
+        .list ul li a span{
+            display:block;
+            width:10rem;
+            height:100%;
+            margin-left:1.2rem;
+            font-size:0.85rem;
+            color:#6a237f;
+            font-weight:bold;
+            line-height:1.1rem;
+        }
+        .list ul li a span p{
+            font-size:0.575rem;
+            font-weight:bold;
+            color:#999;
+        }
+        .list ul li a i{
+            width:0.325rem;
+            height:0.55rem;
+            background:url("img/jt.png")no-repeat;
+            background-size:100%;
+            margin:0.7rem 2rem 1.9rem 0;
+        }
+        .list ul li a .j2{
+            color:#9e5f44;
+        }
+        .list ul li a .j3{
+            color:#8db46d;
+        }
+    </style>
+    <script>
+        var rem = 20;
+        ;(function(win,doc){
+            var rem = 20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem +'px';
+            win.addEventListener('resize',function(){
+                var rem = 20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem +'px';
+            },false);
+        })(window,document);
+    </script>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="a1">返回</a>
+    <span>聚宝盆</span>
+</header>
+
+<section class="title">
+    <ul>
+        <li><a href="javascript:;">商品</a></li>
+        <li><a href="javascript:;">生活</a></li>
+        <li><a href="javascript:;">品牌</a></li>
+        <li class="last"><a href="javascript:;">聚宝盆</a></li>
+    </ul>
+</section>
+
+<section class="ad">
+    <ul>
+        <li><img src="img/jbp.png"/></li>
+        <li><img src="img/jbp.png"/></li>
+        <li><img src="img/jbp.png"/></li>
+        <li><img src="img/jbp.png"/></li>
+        <li><img src="img/jbp.png"/></li>
+    </ul>
+    <ol>
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</section>
+
+<section class="list">
+    <ul>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <img src="img/jubaopen%20(1).png" class="fl"/>
+                <span class="fl">聚名品<p>轻奢购物第一站</p></span>
+                <i class="fr"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <img src="img/jubaopen%20(2).png" class="fl"/>
+                <span class="j2 fl">聚家装<p>家装一起团 费用省一半</p></span>
+                <i class="fr"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <img src="img/jubaopen%20(3).png" class="fl"/>
+                <span class="j3 fl">聚透<p>每晚8点 预定明日商品</p></span>
+                <i class="fr"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+
+
+
+</body>
+</html>

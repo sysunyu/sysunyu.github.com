@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <style>
+        header{
+            width:16rem;
+            height:2.5rem;
+            background:-webkit-linear-gradient(#fff,#ebebeb);
+            position:relative;
+        }
+        header .a1{
+            display:block;
+            width:3.25rem;
+            height:1.6rem;
+            background:url("img/return.png") no-repeat;
+            background-size:100%;
+            text-indent:-999em;
+            position:absolute;
+            left:0.5rem;
+            top:0.5rem;
+        }
+        header span{
+            display:block;
+            width:9rem;
+            height:2.2rem;
+            font-size:0.775rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:2.2rem;
+            margin-left:4rem;
+        }
+
+        .list ul{
+            width:16rem;
+            height:20rem;
+        }
+        .list ul li{
+            width:100%;
+            height:4.975rem;
+            border-bottom:1px solid #dcdcdc;
+
+        }
+        .list ul li a{
+            display:block;
+            width:100%;
+            height:100%;
+            padding:0.5rem 0.7rem 0.49rem 0.5rem;
+        }
+        .list ul li a .p1{
+            width:5.95rem;
+            height:3.95rem;
+            border:1px solid #dcdcdc;
+            margin-right:0.7rem;
+        }
+        .list ul li a .p1 img{
+            width:5.6rem;
+            height:3.85rem;
+            margin:0.05rem auto;
+        }
+        .list ul li a .p2{
+            width:7.525rem;
+            height:3.85rem;
+            margin:0.55rem 0;
+        }
+        .list ul li a .p2 .c1{
+            display:block;
+            width:100%;
+            height:1.575rem;
+            font-size:0.65rem;
+            font-weight:bold;
+            color:#000;
+            line-height:0.7875rem;
+        }
+        .list ul li a .p2 .c2{
+            display:block;
+            width:100%;
+            height:0.75rem;
+            font-size:0.75rem;
+            color:#c3213c;
+            font-weight:bold;
+            margin:0.2rem 0;
+        }
+        .list ul li a .p2 .c2 i{
+            font-size:0.49rem;
+            color:#999;
+            font-weight:bold;
+            text-decoration:line-through;
+        }
+        .list ul li a .p2 i{
+            font-size:0.45rem;
+            font-weight:bold;
+            color:#999;
+        }
+        .list ul li a .p2 i b{
+            width:2rem;
+            height:0.75rem;
+            background:#39b54a;
+            color:#fff;
+            border-radius:10%;
+            float:right;
+            text-align:center;
+            line-height:0.75rem;
+        }
+    </style>
+    <script>
+        var rem = 20;
+        ;(function(win,doc){
+            var rem = 20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem +'px';
+            win.addEventListener('resize',function(){
+                var rem = 20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem +'px';
+            },false);
+        })(window,document);
+    </script>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="a1">返回</a>
+    <span>聚透</span>
+</header>
+
+<section class="list">
+    <ul>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/list%20(2).png"/>
+                </p>
+                <p class="p2 fl">
+                        <span class="c1">
+                            新田园，林下散养草鸡蛋 40枚 纯天然无污
+                        </span>
+                    <span class="c2">￥51.00   <i>￥96</i></span>
+                    <i>1240 人已购买 <b>即将开团</b></i>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/list%20(3).png"/>
+                </p>
+                <p class="p2 fl">
+                        <span class="c1">
+                            香港九龙东智选假日酒店高级房1晚+2份...
+                        </span>
+                    <span class="c2">￥770.00   <i>￥3088.00</i></span>
+                    <i>预下单<b>即将开团</b></i>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/list%20(6).png"/>
+                </p>
+                <p class="p2 fl">
+                            <span class="c1">
+                                帅康TA2W欧式油烟机+019B2燃气灶
+                            </span>
+                    <span class="c2">￥2468.00   <i>￥3304.00</i></span>
+                    <i>140 人已购买<b>即将开团</b></i>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/list%20(8).png"/>
+                </p>
+                <p class="p2 fl">
+                            <span class="c1">
+                                <i>1.2折</i>
+                                云水谣主题餐厅塘河路店赏原生态云贵...
+                            </span>
+                    <span class="c2">￥61.00   <i>￥86</i></span>
+                    <i>2240 人已购买<b>即将开团</b></i>
+                </p>
+            </a>
+        </li>
+    </ul>
+</section>
+</body>
+</html>

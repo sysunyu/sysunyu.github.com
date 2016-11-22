@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>360影视</title>
+<link href="css/base.css" rel="stylesheet">
+<style>
+    .return{ display:block; width:100px; height:100px; position:fixed; top:150px; right:0; }
+    .return img{width:100%; height:100%; border-radius:50%;}
+	.header{ height:70px; border-bottom:2px solid #22ac38;}
+	.header h1 a{ width:147px; height:23px; background:url(images/1.png) no-repeat -4px -24px; float:left; margin:24px 14px 23px 4px; text-indent:-999em;}
+	.find{ width:462px; height:38px; background:#eee; resize:none; margin:18px 0 14px 14px; float:left; line-height:38px; border:none;}
+	.header .sou{ display:block; width:39px; height:39px; margin:18px 0 14px -1px; float:left;}
+	.me{ width:304px; height:26px; float:right; margin:27px 0 17px 0;}
+	.me li a{ display:block; float:left; width:88px; height:26px;}
+	.me .m1 a{ width:70px; height:26px; background:url(images/2_06.png) no-repeat; padding-left:31px;}
+	.me .m2 a{ width:70px; height:26px; background:url(images/2_08.png) no-repeat; padding-left:32px;}
+	.me .m3 a{ width:70px; height:26px; background:url(images/2_03.png) no-repeat; padding-left:31px;}
+	                           
+	.column{ height:44px; background:#fff;}
+	.column .list1 li a{ font-size:16px; color:#666; float:left; padding:13px 0 15px 26px;}
+	.column .list2 li a{ font-size:14px; color:#666; float:right; padding:15px 20px 15px 0;}
+	.column .list2 li .last{padding-right:4px;}
+	.list1 li a:hover{color:#22ac38;}
+    .list2 li a:hover{color:#22ac38;}
+	.column .list1 .first{padding-left:0;}
+	
+	
+	.main-01{ height:480px; position:relative;}
+	.main-01 img{width:100%; height:480px;}
+	.main-01 .con{ position:absolute; left:20px; bottom:84px; font-size:34px; color:#fff;}
+	.main-01 .con p{ font-size:18px; color:#fff; margin-top:23px;}
+	.main-01 .opa{ width:100%; height:58px; position:absolute; left:0; bottom:20px; }
+	.opa li .p1{ display:block; float:left; width:98px; height:57px; background:url(images/3.png) no-repeat 0 -521px; margin-right:14px;}
+	.opa li .p2{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -113px -521px; margin-right:15px;}
+	.opa li .p3{ display:block; float:left; width:97px; height:55px; background:url(images/3.png) no-repeat -227px -522px; margin-right:14px;}
+	.opa li .p4{ display:block; float:left; width:97px; height:55px; background:url(images/3.png) no-repeat -341px -522px; margin-right:14px;}
+	.opa li .p5{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -455px -523px; margin-right:14px;}
+	.opa li .p6{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -570px -522px; margin-right:16px;}
+	.opa li .p7{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -683px -522px; margin-right:16px;}
+	.opa li .p8{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -797px -522px; margin-right:17px;}
+	.opa li .p9{ display:block; float:left; width:99px; height:57px; background:url(images/3.png) no-repeat -910px -522px;}
+	.opa li{ background:#000; opacity:1; filter:alpha(opacity=100);}
+	
+   .back{ background:#f4f4f4; width:1007px; margin:0 auto;}
+   .main{ height:88px;}
+   .main h2{ font-size:30px; color:#2b2b2b; margin-top:41px; float:left;}
+   .main h3{ font-size:25px; color:#2b2b2b; margin-top:41px; float:left; font-weight:bold;}
+   .main ul li{ float:left; margin-top:51px; height:20px; text-align:center; line-height:20px; width:56px; border-right:1px solid #bdbdbd;}
+   .main li a{ font-size:14px; color:#242424; font-family:'微软雅黑'; font-weight:bold;}
+   .main li a:hover{ color:#50b75d;}
+   .main p{ font-size:20px; color:#333; font-weight:bold; font-family:'微软雅黑'; margin-top:44px;}
+   .main-l li p{ font-size:12px; color:#444; margin-top:15px;}
+   .ul-1{ background:#fff; width:377px; height:292px;}
+   .ul-r{ margin-left:6px; background:#fff; margin-bottom:20px; height:136px;}
+   .ul-r p{ font-size:12px; color:#444; margin-top:15px;}
+   
+   .main-rr{ margin-left:15px; background:#fff;}
+   .ul-du{ margin:6px 4px 14px 8px;}
+   .ul-du li{ font-size:12px; color:#333; margin-top:15px; font-family:'微软雅黑';}
+   .non li{ margin-left:10px; background:#fff;}
+   .non .lili-1{ margin-left:3px;}
+   .non li p{ font-size:12px; color:#999; margin-bottom:11px; margin-left:10px;}
+   .non .p1{ font-size:12px; color:#333; margin-top:15px;}
+   .mon li{ margin-left:10px; background:#fff;}
+   .mon .lili-1{ margin-left:3px;}
+   .mon li p{ font-size:12px; color:#999; margin-bottom:11px; margin-left:10px;}
+   .mon .p1{ font-size:12px; color:#333; margin-top:15px;}
+   .mon{ margin-top:20px;}
+   .menu{ width:240px; margin-left:14px;}
+   .menu li span{ font-size:10px; color:#aaa; margin-left:10px;}
+   .menu .sp-2{ font-size:12px; color:#2b2b2b; margin-left:11px; font-weight:bold;}
+   .menu .im{ margin-left:22px;}
+   .menu .sp-1{ color:#46c832;}
+   .ul-ul .li-1{ height:34px; width:240px; line-height:34px;}
+   .ul-ul .li-2{ height:34px; width:240px; background:#eee; line-height:34px;}
+   .ul-ul .ii{ margin-left:10px;}
+   .menu h2{ font-size:24px; color:#2b2b2b; font-family:'微软雅黑'; margin:14px 0 14px 4px;}
+   .ul-2{ background:#fff; height:136px;}
+   .ul-2{ padding:18px 20px 4px;}
+   .ul-2 li{ margin-bottom:16px; font-size:12px; color:#313131; font-weight:bold;}
+   .ul-4 li{ float:left; margin-right:6px; text-align:center; background:#fff; height:135px;}
+   .ul-4 li p{ font-size:13px; color:#686868; margin-top:14px;}
+   .ul-4 .rrr{ background:#f4f4f4; font-weight:bold;}
+   .main-t .pp{ margin-top:10px;}
+   .main-t li{ text-align:center;}
+   .zong{ padding-bottom:20px;}
+   .zong-l{ width:374px; background:#fff;}
+   .zong-c{ width:374px; margin-left:8px;}
+   .zong-c li{ background:#fff; margin-right:6px;}
+   .zong .bb{ margin-top:18px;}
+   .zong-l .p-p{ font-size:12px; color:#888; margin-top:16px; margin-bottom:22px;}
+   .zong-l .pp{ font-size:12px; color:#444; margin-top:20px;}
+   .zong-c .pp{ font-size:12px; color:#444; margin-top:14px;}
+   .zong-c .p-p{ font-size:12px; color:#888; margin-top:10px; margin-bottom:8px;}
+   .zong-r{ width:240px; margin-left:10px;}
+   .zong-r li span{ font-size:10px; color:#aaa; margin-left:10px;}
+   .zong-r .sp-2{ font-size:12px; color:#2b2b2b; margin-left:11px; font-weight:bold;}
+   .zong-r.im{ margin-left:22px;}
+   .zong-r .sp-1{ color:#46c832;}
+   .zong-r .li-1{ height:40px;}
+   .yi li a{ display:block; width:32px; height:32px; background:#eee;}
+   .yi li{ float:left; line-height:32px; text-align:center; margin-right:1px; font-size:12px; color:#333;}
+   .yi{ margin-left:9px;}
+   .yi li:hover a{ background:#46c832;}
+   .pg{ margin-left:9px;}
+   .ma{ height:88px;}
+   .ma h2{ font-size:30px; color:#2b2b2b; margin-top:41px; float:left;}
+   .ma h3{ font-size:25px; color:#2b2b2b; margin-top:41px; float:left; font-weight:bold;}
+   .ma ul li{ float:left; margin-top:51px; height:20px; text-align:center; line-height:20px; width:100px; border-right:1px solid #bdbdbd;}
+   .ma li a{ font-size:14px; color:#242424; font-family:'微软雅黑'; font-weight:bold;}
+   .ma li a:hover{ color:#50b75d;}
+   .end-t{ width:622px;}
+   .end-t li{ margin-right:1px;}
+   .end-t .li-l{ margin-right:0;}
+    a img{ border:0;}
+	img{ display:block;}
+   .end{ margin:0 auto; padding-bottom:200px;}
+	
+	.footer{ width:432px; background:#f4f4f4;}
+	.fo1 li{ float:left; border-right:3px solid #956695;}
+	.fo1 li a{ font-size:11px; color:#666; margin-left:10px; margin-right:10px;}
+	.fo1 .last{ border-right:none;}
+	.footer-2{ width:660px; font-size:11px; color:#666; margin-top:18px; padding-bottom:72px;}
+</style>
+</head>
+
+<body>
+    <a href="../../index.html" class="return"><img src="../../images/return.jpg"/></a>
+	<div class="header w clearfix">
+    	<h1><a href="#">360影视</a></h1>
+        <textarea name="area" placeholder="哆啦A梦：伴我同行" class="find"></textarea>
+        <a href="#" class="sou"><img src="images/sousuo.png" alt=""/></a>
+        <ul class="me">
+            <li class="m1"><a href="#">我的影视</a></li>
+            <li class="m2"><a href="#">观看记录</a></li>
+            <li class="m3"><a href="#">APP下载</a></li>
+        </ul>
+    </div>
+    
+    <div class="column w clearfix">
+    	<ul class="list1">
+        	<li><a href="#" class="first">首页</a></li>
+            <li><a href="#">网络院线</a></li>
+            <li><a href="#">电视剧</a></li>
+            <li><a href="#">电影·预告</a></li>
+            <li><a href="#">综艺</a></li>
+            <li><a href="#">动漫</a></li>
+            <li><a href="#">资讯</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">直播</a></li>
+            <li><a href="#">广场</a></li>
+        </ul>
+        <ul class="list2">
+        	<li><a href="#" class="last">专题</a></li>
+            <li><a href="#">游戏</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">舞蹈</a></li>
+            <li><a href="#">搞笑</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">秀场</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-01 w">
+    	<a href="#"><img src="images/main_03.png" alt=""/></a>
+        <div class="con">大汉情缘之云中歌 <p>云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p></div>
+        <div class="opa">
+			<ul>
+            	<li><a href="#"  class="p1"></a></li>
+                <li><a href="#"  class="p2"></a></li>
+                <li><a href="#"  class="p3"></a></li>
+                <li><a href="#"  class="p4"></a></li>
+                <li><a href="#"  class="p5"></a></li>
+                <li><a href="#"  class="p6"></a></li>
+                <li><a href="#"  class="p7"></a></li>
+                <li><a href="#"  class="p8"></a></li>
+                <li><a href="#"  class="p9"></a></li>
+            </ul>        
+        </div>
+    </div>
+    
+<div class="back">
+   <div class="main w clearfix">
+      <h2>今日热门</h2>
+      <ul class="fl">
+        <li><a href="#">热点</a></li>
+        <li><a href="#">美女</a></li>
+        <li><a href="#">游戏</a></li>
+        <li><a href="#">搞笑</a></li>
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">独家热门资讯</p>
+   </div>
+   <div class="main-1 w clearfix">
+      <div class="main-l fl">
+         <ul class="ul-1">
+           <li>
+           <a href="#"><img src="images/h01.png" alt=""/></a>
+           <p>女子餐厅被刀架脖劫持 假装喂劫犯饮料瞬间逃离</p>
+           </li>
+         </ul>
+      </div>
+      <div class="main-r clearfix fl">
+         <div class="main-t">
+          <ul class="ul-r fl">
+            <li>
+              <a href="#"><img src="images/h02.png"alt=""/></a>
+              <p>李小璐甜馨穿亲子装出街</p>
+            </li>
+          </ul>
+          <ul class="ul-r fl">
+            <li>
+              <a href="#"><img src="images/h03.png" alt=""/></a>
+              <p>文章为爱马庆生照曝光</p>
+            </li>
+          </ul>
+          </div>
+          <div class="main-t">
+          <ul class="ul-r fl">
+            <li>
+              <a href="#"><img src="images/h04.png" alt=""/></a>
+              <p>北京居民遛狗现淫秽窝点</p>
+            </li>
+          </ul>
+          <ul class="ul-r fl">
+            <li>
+              <a href="#"><img src="images/h05.png" alt=""/></a>
+              <p>澳海滩现奇特蓝色生物</p>
+            </li>
+          </ul>
+          </div>
+      </div>
+      <div class="main-rr fl">
+          <a href="#"><img src="images/h06.png" alt=""/></a>
+          <ul class="ul-du">
+            <li class="li-li"><a href="#">二十国集团峰会即将开幕</a></li>
+            <li><a href="#">官员与女同学开房被撤职 称 “ 和衣而睡”</a></li>
+            <li><a href="#">深扒范玮琪如何从 “万人迷” 变成 “万</a></li>
+            <li><a href="#">堂姐设毒宴接风23岁嫩模酒店吸毒被拘</a></li>
+            <li><a href="#">美媒炒中国新航母使用电磁弹射</a></li>
+          </ul>
+      </div>
+    </div>
+    
+    <div class="main w clearfix">
+      <h2>电视剧</h2>
+      <ul class="fl">
+        <li><a href="#">热门</a></li>
+        <li><a href="#">最新</a></li>
+        <li><a href="#">内地</a></li>
+        <li><a href="#">港台</a></li>
+        <li><a href="#">韩剧</a></li>
+        <li><a href="#">美剧</a></li>
+        <li><a href="#">泰剧</a></li>
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">本月最受关注电视剧</p>
+   </div>
+    <div class="w clearfix run">
+    <div class="fl"> 
+    <div class="non">
+      <ul class="clearfix">
+       <li class="fl lili-1">
+          <a href="#"><img src="images/n01.png" alt=""/></a>
+          <p class="p1">家和万事兴 TV版</p>
+          <p>豪门的家庭 怎么会和睦</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n02.png" alt=""/></a>
+          <p class="p1">万万没想到 第三季</p>
+          <p>男神大锤迷倒众女神</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n03.png" alt=""/></a>
+          <p class="p1">野山鹰</p>
+          <p>中国版“霹雳娇娃”</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n04.png" alt=""/></a>
+          <p class="p1">大秧歌</p>
+          <p>屌丝逆袭! 广场舞也有春天</p>
+       </li> 
+      </ul>
+      </div>
+      <div class="mon">
+      <ul class="clearfix">
+       <li class="fl lili-1">
+          <a href="#"><img src="images/n05.png" alt=""/></a>
+          <p class="p1">新济公活佛下部</p>
+          <p>陈浩民爆笑回归</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n06.png" alt=""/></a>
+          <p class="p1">大汉情缘之云中歌</p>
+          <p>Angelababy古装绝美虐恋</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n07.png" alt=""/></a>
+          <p class="p1">反恐特战队</p>
+          <p>真枪实弹爆炒小鲜肉</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/n08.png" alt=""/></a>
+          <p class="p1">大好时光</p>
+          <p>都市男女的爱情狂欢</p>
+       </li> 
+      </ul>
+      </div>                         
+      </div>
+      <div class="menu fl">
+          <ul class="ul-ul">
+            <li><img src="images/n09.png" alt=""/></li>
+            <li class="li-1"><a href="#">
+            <span class="sp-1">2</span><span class="sp-2">大汉情缘之云中歌</span>
+            <span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+            <li class="li-2"><a href="#"><span class="sp-1">3</span>
+            <span class="sp-2">大好时光</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></i></span></a></li>
+            <li class="li-1"><a href="#"><span class="sp-1">4</span>
+            <span class="sp-2">新活佛济公</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+            <li class="li-2"><a href="#"><span class="sp-1">5</span>
+            <span class="sp-2">北上广不相信眼泪</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+            <li class="li-1"><a href="#"><span class="sp-1">6</span>
+            <span class="sp-2">野山鹰</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+            <li class="li-2"><a href="#"><span class="sp-1">7</span>
+            <span class="sp-2">钱塘传奇</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+            <li class="li-1"><a href="#"><span class="sp-1">8</span>
+            <span class="sp-2">香港大营救</span><span class="fr">
+            <img src="images/4.png" alt="" class="im"/></span></a></li>
+              <li class="li-2"><a href="#"><span class="sp-1">9</span>
+              <span class="sp-2">他来了，请闭眼</span><span class="fr">
+              <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">10</span>
+               <span class="sp-2">多情江山</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+          </ul>
+            <h2>电视剧筛选</h2>
+             <ul class="ul-2">
+            <li class="clearfix">类型：
+               <a href="#">偶像</a> <a href="#">都市</a> <a href="#">谍战</a> <a href="#">古装</a>
+            </li>
+            <li class="clearfix">地区：
+               <a href="#">内地</a> <a href="#">美国</a> <a href="#">韩国</a> <a href="#">香港</a>
+            </li>
+            <li class="clearfix">年份：
+               <a href="#">2015</a> <a href="#">2014</a> <a href="#">2013</a> <a href="#">2012</a>
+            </li>
+            <li class="clearfix">演员：
+               <a href="#">孙俪</a> <a href="#">唐嫣</a> <a href="#">钟汉良</a> <a href="#">胡歌</a>
+            </li>
+          </ul>
+      </div>
+    </div> 
+  
+  
+    <div class="main w clearfix">
+      <h2>电影</h2>
+      <ul class="fl">
+        <li><a href="#">热门</a></li>
+        <li><a href="#">最新</a></li>
+        <li><a href="#">喜剧</a></li>
+        <li><a href="#">爱情</a></li>
+        <li><a href="#">动作</a></li>
+        <li><a href="#">恐怖</a></li>
+        <li><a href="#">战争</a></li>
+        <li><a href="#">魔幻</a></li>
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">本月最受关注电影</p>
+   </div>
+    <div class="w clearfix run">
+    <div class="fl"> 
+    <div class="non">
+      <ul class="clearfix">
+       <li class="fl lili-1">
+          <a href="#"><img src="images/d01.png" alt=""/></a>
+          <p class="p1">别有动机</p>
+          <p>港式高智商烧脑电影</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d02.png" alt=""/></a>
+          <p class="p1">使命召唤</p>
+          <p>西恩潘斗胆挑战最强特工</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d03.png" alt=""/></a>
+          <p class="p1">碟中谍4</p>
+          <p>中国版“霹雳娇娃”</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d04.png" alt=""/></a>
+          <p class="p1">冲锋车</p>
+          <p>阿汤哥再一次让我们没有</p>
+       </li> 
+      </ul>
+      </div>
+      <div class="mon">
+      <ul class="clearfix">
+       <li class="fl lili-1">
+          <a href="#"><img src="images/d05.png" alt=""/></a>
+          <p class="p1">速度与激情7</p>
+          <p>我们与保罗重逢</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d06.png" alt=""/></a>
+          <p class="p1">道士下山</p>
+          <p>王宝强下山闯天下</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d07.png" alt=""/></a>
+          <p class="p1">破坏者</p>
+          <p>施瓦辛格不一样的猛男子</p>
+       </li> 
+       <li class="fl">
+          <a href="#"><img src="images/d08.png" alt=""/></a>
+          <p class="p1">飓风营救3</p>
+          <p>最强特工为上演12绝杀</p>
+       </li> 
+      </ul>
+      </div>
+      </div>
+      <div class="menu fl">
+          <ul class="ul-ul">
+               <li><img src="images/d09.png" alt=""/></li>
+               <li class="li-1"><a href="#"><span class="sp-1">2</span>
+               <span class="sp-2">屌丝侠</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></i></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">3</span>
+               <span class="sp-2">道士下山</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">4</span>
+               <span class="sp-2">僵尸归来</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">5</span>
+               <span class="sp-2">斗地主</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">6</span>
+               <span class="sp-2">人皮拼图</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">7</span>
+               <span class="sp-2">山炮进城</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">8</span>
+               <span class="sp-2">007：大破天幕杀机</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">9</span>
+               <span class="sp-2">天师伏魔之觉醒</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">10</span>
+               <span class="sp-2">喜马拉雅天梯</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+          </ul>
+            <h2>电影筛选</h2>
+             <ul class="ul-2">
+            <li class="clearfix">类型：
+               <a href="#">喜剧</a> <a href="#">犯罪</a> <a href="#">剧情</a> <a href="#">伦理</a>
+            </li>
+            <li class="clearfix">地区：
+               <a href="#">大陆</a> <a href="#">香港</a> <a href="#">美国</a> <a href="#">韩国</a>
+            </li>
+            <li class="clearfix">年份：
+               <a href="#">2015</a> <a href="#">2014</a> <a href="#">2013</a> <a href="#">2012</a>
+            </li>
+            <li class="clearfix">演员：
+               <a href="#">范冰冰</a> <a href="#">杨幂</a> <a href="#">黄渤</a> <a href="#">赵薇</a>
+            </li>
+          </ul>
+      </div>
+    </div> 
+  
+  
+   <div class="main w clearfix">
+      <h3>电影·预告片</h3>
+      <ul class="fl">
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">电影.专题</p>
+   </div>
+   <div class="clearfix w">
+      <ul class="ul-4">
+       <li>
+          <a href="#"><img src="images/m01.png" alt=""/><p>《蚁人》</p></a>
+       </li>
+       <li>
+          <a href="#"><img src="images/m02.png" alt=""/><p>《我是证人》</p></a>
+       </li>
+       <li>
+          <a href="#"><img src="images/m03.png" alt=""/><p>《绝命海拔》</p></a>
+       </li>
+       <li>
+          <a href="#"><img src="images/m04.png" alt=""/><p>《007：幽灵党》</p></a>
+       </li>
+       <li class="rrr">
+         <a href="#"><img src="images/m05.png" alt=""/><p>亿万票房女王白百合的上位史</p></a>
+       </li>
+     </ul>
+   </div>
+   
+    <div class="main w clearfix">
+      <h2>综艺</h2>
+      <ul class="fl">
+        <li><a href="#">热门</a></li>
+        <li><a href="#">选秀</a></li>
+        <li><a href="#">情感</a></li>
+        <li><a href="#">访谈</a></li>
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">人气综艺榜</p>
+   </div>
+  <div class="zong w clearfix">
+     <div class="zong-l fl">
+       <a href="#"><img src="images/z01.png" alt=""/>
+       <p class="pp">奔跑吧兄弟 第三季</p>
+       <p class="p-p">跑男团不撕名牌比才艺“好声音现场”开演唱会</p>
+       </a>
+     </div>
+     <div class="zong-c fl">
+        <ul>
+           <li class="fl">
+              <a href="#"><img src="images/z02.png" alt=""/>
+              <p class="pp">一年级 大学季</p>
+              <p class="p-p">宋佳暖心驾到，邢菲晒泪练习</p>
+              </a>
+           </li>
+           <li class="fl">
+              <a href="#"><img src="images/z03.png" alt=""/>
+              <p class="pp">快乐大本营</p>
+              <p class="p-p">来吧！朋友，紧贴我的脸！</p>
+              </a>
+           </li>
+           <li class="fl bb">
+              <a href="#"><img src="images/z04.png" alt=""/>
+              <p class="pp">女婿上门了</p>
+              <p class="p-p">什么时候吃喜糖？逼婚的节奏</p>
+              </a>
+           </li>
+           <li class="fl bb">
+              <a href="#"><img src="images/z05.png" alt=""/>
+              <p class="pp">笑傲江湖 第二季</p>
+              <p class="p-p">我就看看不说话</p>
+              </a>
+           </li>
+        </ul>
+     </div>
+     <div class="zong-r fl">
+          <ul class="ul-ul">
+               <li><img src="images/d09.png" alt=""/></li>
+               <li class="li-1"><a href="#"><span class="sp-1">2</span>
+               <span class="sp-2">笑傲江湖 第二季</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></i></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">3</span>
+               <span class="sp-2">全员加速中</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">4</span>
+               <span class="sp-2">快乐大本营</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">5</span>
+               <span class="sp-2">女婿上门了</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-1"><a href="#"><span class="sp-1">6</span>
+               <span class="sp-2">挑战者联盟</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+               <li class="li-2"><a href="#"><span class="sp-1">7</span>
+               <span class="sp-2">金星脱口秀</span><span class="fr">
+               <img src="images/4.png" alt="" class="im"/></span></a></li>
+          </ul>
+  </div>
+</div>
+
+   <div class="main w clearfix">
+      <h2>动漫</h2>
+      <ul class="fl">
+        <li><a href="#">热门</a></li>
+        <li><a href="#">日韩</a></li>
+        <li><a href="#">国产</a></li>
+        <li><a href="#">欧美</a></li>
+        <li><a href="#">更多>></a></li>
+      </ul>
+      <p class="fr">每日更新</p>
+   </div>
+   <div class="zong w clearfix">
+     <div class="zong-l fl">
+       <a href="#"><img src="images/carton1.png" alt=""/>
+       <p class="pp">海绵宝宝</p>
+       <p class="p-p">爱惹麻烦的海绵宝宝</p>
+       </a>
+     </div>
+     <div class="zong-c fl">
+        <ul>
+           <li class="fl">
+              <a href="#"><img src="images/carton2.png" alt=""/>
+              <p class="pp">加菲猫的幸福生活</p>
+              <p class="p-p">好吃懒做的肥猫</p>
+              </a>
+           </li>
+           <li class="fl">
+              <a href="#"><img src="images/carton3.png" alt=""/>
+              <p class="pp">米奇妙妙屋</p>
+              <p class="p-p">迪士尼经典益智动画</p>
+              </a>
+           </li>
+           <li class="fl bb">
+              <a href="#"><img src="images/carton4.png" alt=""/>
+              <p class="pp">小熊维尼历险记</p>
+              <p class="p-p">小小鳄鱼爱洗澡</p>
+              </a>
+           </li>
+           <li class="fl bb">
+              <a href="#"><img src="images/carton2.png" alt=""/>
+              <p class="pp">憨豆先生</p>
+              <p class="p-p">憨豆先生的爆笑生活</p>
+              </a>
+           </li>
+        </ul>
+     </div>
+     <div class="zong-1 fl">
+       <ul class="yi">
+          <li><a href="#">一</a></li>
+          <li><a href="#">二</a></li>
+          <li><a href="#">三</a></li>
+          <li><a href="#">四</a></li>
+          <li><a href="#">五</a></li>
+          <li><a href="#">六</a></li>
+          <li><a href="#">日</a></li>
+       </ul>
+       <div class="pg">
+       <img src="images/carton5.png" alt=""/>
+       </div> 
+  </div>
+</div>
+
+<div class="ma w clearfix">
+      <h2>独家策划</h2>
+      <ul class="fl">
+        <li><a href="#">明星剧场</a></li>
+        <li><a href="#">音乐汇</a></li>
+        <li><a href="#">体坛荷尔蒙</a></li>
+        <li><a href="#">搞笑联盟台</a></li>
+        <li><a href="#">美女时尚</a></li>
+      </ul>
+</div>
+  <div class="end w clearfix">
+     <div class="end-l fl">
+       <div class="end-tt ">
+         <ul class="end-t clearfix">
+           <li class="fl"><a href="#"><img src="images/girl (1).png" alt=""/></a></li>
+           <li class="fl"><a href="#"><img src="images/girl (2).png" alt=""/></a></li>
+           <li class="fl"><a href="#"><img src="images/girl (3).png" alt=""/></a></li>
+           <li class="li-l fl"><a href="#"><img src="images/girl (4).png" alt=""/></a></li>
+           <li class="fl"><a href="#"><img src="images/girl (5).png" alt=""/></a></li>
+           <li class="fl"><a href="#"><img src="images/girl (6).png" alt=""/></a></li>
+         
+         </ul>
+      </div>
+      
+     </div>
+     <div class="end-r fl"><img src="images/girl (7).png" alt=""/></div>
+  </div>   
+    
+    
+    <div class="footer w">
+    		<ul class="fo1">
+        		<li><a href="#">意见反馈</a></li>
+            	<li><a href="#">官方微博</a></li>
+            	<li><a href="#">加入收藏</a></li>
+            	<li><a href="#">版权声明</a></li>
+            	<li><a href="#">关于我们</a></li>
+            	<li><a href="#" class="last">联系方式</a></li>
+        	</ul>
+        </div>
+    	<div class="footer-2 w"><p>Copyright&copy;360安全网址.All Rights Reserved.    浙ICP证B2-20090064号  信息网络传播视听节目许可证1109357号</p></div>
+    </div>
+</body>
+</html>

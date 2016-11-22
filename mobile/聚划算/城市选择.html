@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width，user-scalable=no, initial-scale=1"/>
+    <title></title>
+    <style>
+        *{ margin: 0; padding: 0; text-decoration: none; list-style: none;}
+        html{ font-size: 20px;}
+        .wrap{
+            width: 16rem;
+            overflow: hidden;
+        }
+        header{
+            width: 16rem;
+            height:2.525rem;
+            background: -webkit-linear-gradient(#fff,#ebebeb);
+            text-align: center;
+            line-height: 2.525rem;
+            position: relative;
+        }
+        header p{
+            font-size: 0.75rem;
+            color: #333;
+            font-weight: bold;
+        }
+        header .a1{
+            width: 3.25rem;
+            height: 1.6rem;
+            display: block;
+            background: url("img/2.png") no-repeat;
+            background-size: 100%;
+            position: absolute;
+            left: 0.5rem;
+            top:0.5rem;
+        }
+        .nav{
+            width:16rem ;
+        }
+        .nav div{
+            width: 16rem;
+            height: 2.2rem;
+            font-size: 0.65rem;
+            font-weight: bold;
+        }
+        .nav div img{
+            margin-top: 0.75rem;
+            margin-left: 0.425rem;
+            width: 0.625rem;
+            height:0.625rem ;
+        }
+        .nav div span{
+            margin-left: 5.7rem;
+            font-weight: bold;
+            color: #345186;
+        }
+        .ul li{
+            width: 16rem;
+            height: 2.1rem;
+            line-height: 2.1rem;
+            border-bottom: 1px solid #ccc;
+            font-size:0.75rem;
+            color:#000;
+            padding-left: 1.5rem;
+        }
+        .ul .li{
+            height: 1.5rem;
+            line-height: 1.5rem;
+            background:#eee ;
+            font-size: 0.65rem;
+            color:#999 ;
+            padding-left: 0;
+        }
+    </style>
+    <script>
+        ;(function(win,doc){
+            var rem=20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem+'px';
+            win.onresize=function(){
+                var rem=20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem+'px';
+            }
+        })(window,document)
+    </script>
+</head>
+<body>
+<section class="wrap">
+    <header class="head">
+        <a href="javascript:;" class="a1"></a>
+        <p>切换城市</p>
+    </header>
+    <section class="nav">
+        <div><img src="img/city.png" alt=""/> 当前位置-杭州<span>√</span></div>
+        <ul class="ul">
+            <li class="li">热门城市</li>
+            <li>南京</li>
+            <li>福州</li>
+            <li>武汉</li>
+            <li>天津</li>
+        </ul>
+        <ul class="ul">
+            <li class="li">A</li>
+            <li>鞍山</li>
+            <li>安庆</li>
+            <li>澳门</li>
+        </ul>
+    </section>
+</section>
+</body>
+</html>

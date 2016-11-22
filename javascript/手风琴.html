@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion</title>
+    <style>
+        *{margin:0; padding:0;}
+        #ul1 li{
+            list-style:none;
+        }
+        #ul1{
+            width:520px;
+            height:280px;
+            position:relative;
+            margin:100px auto;
+            overflow:hidden;
+        }
+    </style>
+    <script src="move4.js"></script>
+    <script>
+        window.onload=function(){
+            var oUl = document.getElementById('ul1');
+            var aLi = oUl.children;
+            var oPos = [];
+            for(var i=0; i<aLi.length; i++){
+                oPos.push({left:aLi[i].offsetLeft})
+            }
+            for(var i=0; i<oPos.length; i++){
+                aLi[i].style.position='absolute';
+                aLi[i].style.left=oPos[i].left+'px';
+            }
+            var w=20;
+            for(var i=1; i<aLi.length; i++){
+                aLi[i].style.left=oUl.offsetWidth-w*(aLi.length-i)+'px';
+            }
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=0; i<aLi.length; i++){
+                        if(i<=this.index){
+                           // aLi[i].style.left=i*w+'px'
+                            move(aLi[i],{left:i*w})
+                        }else{
+                            //aLi[i].style.left=oUl.offsetWidth-w*(aLi.length-1)+'px';
+                            move(aLi[i],{left:oUl.offsetWidth-w*(aLi.length-i)});
+                        }
+                    }
+                };
+            }
+        };
+    </script>
+
+</head>
+<body>
+    <ul id="ul1">
+        <li><img src="images/0.jpg" alt=""/></li>
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+    </ul>
+</body>
+</html>

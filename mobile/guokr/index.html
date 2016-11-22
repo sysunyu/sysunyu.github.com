@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <style>
+        header{
+            width:15.2rem;
+            height:1.2rem;
+            background:#252626;
+            border-bottom:0.125rem solid #4bccae;
+            padding:0.5rem 0.4rem;
+        }
+        header img{
+            width:1.45rem;
+            height:1.2rem;
+        }
+        header span{
+            display:block;
+            width:6.3rem;
+            height:1.2rem;
+            margin:0 3rem;
+            font-size:1rem;
+            color:#fefefe;
+            font-weight:bold;
+            text-align:center;
+            line-height:1.2rem;
+        }
+
+        .login{
+            width:16rem;
+            height:2.075rem;
+            background:#fafafa;
+        }
+        .login img{
+            width:1.475rem;
+            height:1.475rem;
+            margin:0.4rem 0.5rem 0.2rem 1.4rem;
+        }
+        .login span{
+            width:4.55rem;
+            height:1.25rem;
+            margin-top:0.4125rem;
+            color:#909090;
+            font-size:0.75rem;
+            font-family:'Microsoft Yahei';
+            line-height:1.475rem;
+        }
+        .login .s1{
+            border-right:0.125rem solid #c4c4c4;
+        }
+
+        .banner img{
+            width:16rem;
+            height:7.8rem;
+        }
+
+        .news{
+            width:16rem;
+        }
+        .news ul{
+            width:15.2rem;
+            margin:0 auto;
+        }
+        .news ul li a{
+            display:block;
+            width:100%;
+            height:2rem;
+            border-bottom:0.05rem solid #ececec;
+            font-size:0.75rem;
+            color:#3d3d3d;
+            font-weight:bold;
+            line-height:2rem;
+            text-indent:0.35rem;
+        }
+        .news ul .last{
+            border:none;
+        }
+
+        .hot{
+            width:16rem;
+            border-top:0.15rem solid #57c0af;
+        }
+        .hot div{
+            width:100%;
+        }
+        .hot div .p1{
+            width:100%;
+            height:1.975rem;
+            border-bottom:0.05rem solid #e2e2e2;
+            font-size:0.75rem;
+            color:#000;
+            font-weight:bold;
+            text-indent:0.77rem;
+            line-height:1.975rem;
+            background:-webkit-linear-gradient(#f8f8f8 20%,#fafafa 100%);
+        }
+        .hot div .p1 img{
+            width:1.475rem;
+            height:1.475rem;
+            float:right;
+            margin-top:0.225rem;
+            margin-right:0.725rem;
+        }
+        .hot div .p2{
+            width:100%;
+            height:2rem;
+            border-bottom:0.05rem solid #ececec;
+        }
+        .hot div .p2 input{
+            width:3.1rem;
+            height:100%;
+            float:left;
+            border:none;
+            background:#fff;
+            font-size:0.75rem;
+            color:#000;
+            font-weight:bold;
+            font-family:'Microsoft Yahei';
+        }
+        .hot div .p2 .on{
+            border-bottom:0.1rem solid #d54159;
+        }
+        .hot div ul{
+            width:15.2rem;
+            margin:0 auto;
+        }
+        .hot div ul li a{
+            display:block;
+            width:100%;
+            height:2rem;
+            border-bottom:0.05rem solid #ececec;
+            font-size:0.75rem;
+            color:#3d3d3d;
+            font-weight:bold;
+            line-height:2rem;
+            text-indent:0.35rem;
+        }
+        .hot ul .last{
+            border:none;
+        }
+        .hot div ul li .first{
+            display:block;
+            width:100%;
+            height:6.625rem;
+        }
+        .hot div ul li .first .ps1{
+            width:100%;
+            height:2rem;
+            font-size:0.75rem;
+            color:#3d3d3d;
+            font-weight:bold;
+            line-height:2rem;
+            text-indent:0.35rem;
+        }
+        .hot div ul li .first img{
+            width:5.175rem;
+            height:3.7rem;
+        }
+        .hot div ul li .first span{
+            display:block;
+            width:9rem;
+            height:3.7rem;
+            font-size:0.675rem;
+            color:#8b8e95;
+            line-height:1.2rem;
+            margin-left:1rem;
+            text-indent:-0.02rem;
+        }
+
+        .back{
+            width:100%;
+            height:2.975rem;
+            border-top:0.05rem solid #ececec;
+            text-align:center;
+        }
+        .back a span{
+            display:block;
+            width:3.15rem;
+            height:1.45rem;
+            line-height:1.45rem;
+            text-align:center;
+            font-size:0.75rem;
+            font-weight:bold;
+            color:#3d3d3d;
+            margin-top:0.875rem;
+        }
+        .back a img{
+            width:1.45rem;
+            height:1.45rem;
+            margin:0.875rem 0.4rem 0.15rem 5.5rem;
+        }
+
+        .bottom{
+            width:100%;
+            height:3.75rem;
+            border-top:0.125rem solid #50cdab;
+            background:#262626;
+        }
+        .bottom ul{
+            width:12.1rem;
+            height:1.9rem;
+            margin:0.85rem auto;
+        }
+        .bottom ul li{
+            float:left;
+        }
+        .bottom ul .first{
+            border-right:0.05rem solid #686868;
+        }
+        .bottom ul li a{
+            display:block;
+            width:5.59rem;
+            height:100%;
+            font-size:0.75rem;
+            font-weight:bold;
+            color:#a0a0a0;
+        }
+        .bottom ul li a img{
+            float:left;
+            width:1.475rem;
+            height:1.15rem;
+            margin:0 0.6rem;
+        }
+
+    </style>
+    <script>
+        var rem = 20;
+        ;(function(win,doc){
+            var rem = 20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem+'px';
+            win.addEventListener('resize',function(){
+                var rem = 20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem+'px';
+            },false)
+        })(window,document);
+    </script>
+</head>
+<body>
+    <header class="clearfix">
+        <img src="img/1.png" class="fl"/>
+        <span class="fl">Guokr.com</span>
+        <img src="img/2.png" class="fr"/>
+    </header>
+
+    <section class="login clearfix">
+        <img src="img/3.png" class="fl"/>
+        <span class="s1 fl">用户登录</span>
+        <img src="img/4.png" class="fl"/>
+        <span class="s2 fl">用户注册</span>
+    </section>
+
+    <section class="banner">
+        <img src="img/banner.png"/>
+    </section>
+
+    <section class="news">
+        <ul>
+            <li><a href="javascript:;">解读科学观点时，你应该知道的20个...</a></li>
+            <li><a href="javascript:;">运动出点汗，更好来谈判</a></li>
+            <li><a href="javascript:;">"关掉"旧习惯，本性不难移</a></li>
+            <li><a href="javascript:;">男女搭配，破案不累</a></li>
+            <li><a href="javascript:;">腰窝，性感无误？</a></li>
+            <li><a href="javascript:;">有7000多种语言，就有7000多个"平行...</a></li>
+            <li><a href="javascript:;" class="last">久坐杀精--今天，你坐了多久？</a></li>
+        </ul>
+    </section>
+
+    <section class="hot">
+        <div>
+            <p class="p1">热门问答<img src="img/7.png"/></p>
+            <p class="p2">
+                <input type="button" value="科技" class="on"/>
+                <input type="button" value="生活"/>
+                <input type="button" value="人文"/>
+                <input type="button" value="自然"/>
+            </p>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="first">
+                        <p class="ps1">如果把探测器撞到彗星上会怎么样？</p>
+                        <p class="ps2 clearfix">
+                            <img src="img/5.png" class="fl"/>
+                            <span class="fl">撞上去的事情人类已经干过了。。深度撞击号（英语：Deep Impact）是美国国家</span>
+                        </p>
+                    </a>
+                </li>
+                <li><a href="javascript:;">这个"肥皂放入牛奶"的效果怎么生产...</a></li>
+                <li><a href="javascript:;">制造出大于全画幅的感光元件有意义吗？</a></li>
+                <li><a href="javascript:;">磁场是运动的电厂吗？</a></li>
+                <li ><a href="javascript:;" class="last">什么函数能描述你的人生？</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="hot">
+        <div>
+            <p class="p1">热门问答<img src="img/7.png"/></p>
+            <p class="p2">
+                <input type="button" value="科技" class="on"/>
+                <input type="button" value="生活"/>
+                <input type="button" value="人文"/>
+                <input type="button" value="自然"/>
+            </p>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="first">
+                        <p class="ps1">史密森尼国家自然史博物馆：古脊椎动...</p>
+                        <p class="ps2 clearfix">
+                            <img src="img/6.png" class="fl"/>
+                            <span class="fl">好久没逛果壳了，偶然发现了Baboon老师关于NMNH的帖子。因为去过多次，看</span>
+                        </p>
+                    </a>
+                </li>
+                <li><a href="javascript:;">#TIL#有的母螳螂会用美色诱杀其....</a></li>
+                <li><a href="javascript:;">艾森彗星T-18小时：绝地反击！</a></li>
+                <li><a href="javascript:;">[ISON]我儿，老大哥在看着你</a></li>
+                <li ><a href="javascript:;" class="last">【天文每日一图】NGC 1999：...</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="back clearfix">
+        <a href="javascript:;">
+            <img src="img/top.png" class="fl"/>
+            <span class="fl">回到顶部</span>
+        </a>
+    </section>
+
+    <section class="bottom">
+        <ul>
+            <li>
+                <a href="javascript:;" class=" first clearfix">
+                    <img src="img/b_03.png"/>
+                    <span>PC版</span>
+
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <img src="img/b_05.png"/>
+                    <span>移动应用</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <style>
+        header{
+            width:16rem;
+            height:2.5rem;
+            background:-webkit-linear-gradient(#fff,#ebebeb);
+            position:relative;
+        }
+        header .a1{
+            display:block;
+            width:3.25rem;
+            height:1.6rem;
+            background:url("img/return.png") no-repeat;
+            background-size:100%;
+            text-indent:-999em;
+            position:absolute;
+            left:0.5rem;
+            top:0.5rem;
+        }
+        header span{
+            display:block;
+            width:9rem;
+            height:2.2rem;
+            font-size:0.775rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:2.2rem;
+            margin-left:3rem;
+        }
+
+        .title{
+            width:16rem;
+            height:2rem;
+            border-bottom:1px solid #dcdcdc;
+        }
+        .title ul li{
+            float:left;
+            border-right:1px solid #dcdcdc;
+            width:3.95rem;
+            height:100%;
+        }
+        .title ul .last{
+            border-right:none;
+        }
+        .title li a{
+            display:block;
+            width:100%;
+            height:100%;
+            font-size:0.575rem;
+            color:#999;
+            text-align:center;
+            line-height:2rem;
+            font-weight:bold;
+        }
+        .title .first a{
+            color:#d51942;
+        }
+
+        .list ul{
+            width:16rem;
+            height:19.425rem;
+        }
+        .list ul li{
+            width:100%;
+            height:6.45rem;
+            border-bottom:1px solid #dcdcdc;
+        }
+        .list ul li a{
+            display:block;
+            width:100%;
+            padding:0.725rem 1.25rem               ;
+        }
+        .list ul li a .p1{
+            width:3.05rem;
+            height:5rem;
+            margin-right:0.7rem;
+            text-align:center;
+        }
+        .list ul li a .p1 img{
+            width:3.05rem;
+            height:1.125rem;
+            margin:0.5rem 0;
+        }
+        .list ul li a .p1 .i1{
+            width:1.175rem;
+            height:0.575rem;
+            font-size:0.575rem;
+            font-weight:bold;
+            color:#858585;
+            margin-top:2rem;
+        }
+        .list ul li a .p1 span{
+            display:block;
+            width:3.4rem;
+            height:1.2rem;
+            margin-top:0.5rem;
+        }
+        .list ul li a .p1 span i{
+            width:1.9rem;
+            height:1.2rem;
+            font-size:1.2rem;
+            font-weight:bold;
+            color:#c7223d;
+        }
+        .list ul li a .p1 span b{
+            width:1.175rem;
+            height:1.2rem;
+            font-size:0.55rem;
+            font-weight:bold;
+            color:#adadad;
+            margin-left:0.2rem;
+        }
+        .list ul li a .p1 span b span{
+            display:block;
+            width:1.175rem;
+            height:0.6rem;
+            font-size:0.55rem;
+            font-weight:bold;
+            color:#c7223d;
+            margin-top:-0.02rem;
+        }
+        .list ul li a .p2{
+            width:10rem;
+            height:5rem;
+        }
+        .list ul li a .p2 img{
+            width:100%;
+            height:100%;
+        }
+
+    </style>
+    <script>
+        var rem = 20;
+        ;(function(win,doc){
+            var rem = 20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem +'px';
+            win.addEventListener('resize',function(){
+                var rem = 20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem +'px';
+            },false);
+        })(window,document);
+    </script>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="a1">返回</a>
+    <span>品牌团</span>
+</header>
+
+<section class="title">
+    <ul>
+        <li><a href="javascript:;">商品</a></li>
+        <li><a href="javascript:;">生活</a></li>
+        <li class="first"><a href="javascript:;">品牌</a></li>
+        <li class="last"><a href="javascript:;">聚宝盆</a></li>
+    </ul>
+</section>
+
+<section class="list">
+    <ul>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/f_03.png"/>
+                    <i class="i1">耐克</i>
+                    <span class="clearfix">
+                        <i class="fl">3.5</i>
+                        <b class="fl">全场<span>折起</span></b>
+                    </span>
+                </p>
+                <p class="p2 fl">
+                    <img src="img/pinpai%20(1).png"/>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/f_07.png"/>
+                    <i class="i1">耐克</i>
+                    <span class="clearfix">
+                        <i class="fl">5.5</i>
+                        <b class="fl">全场<span>折起</span></b>
+                    </span>
+                </p>
+                <p class="p2 fl">
+                    <img src="img/pinpai%20(2).png"/>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <p class="p1 fl">
+                    <img src="img/f_10.png"/>
+                    <i class="i1">耐克</i>
+                    <span class="clearfix">
+                        <i class="fl">3.0</i>
+                        <b class="fl">全场<span>折起</span></b>
+                    </span>
+                </p>
+                <p class="p2 fl">
+                    <img src="img/pinpai%20(3).png"/>
+                </p>
+            </a>
+        </li>
+    </ul>
+</section>
+</body>
+</html>
